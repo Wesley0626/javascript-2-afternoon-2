@@ -208,21 +208,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, item){
+  if(myGroceryList && item){
   for(let i = 0; i < myGroceryList.length; i++){
     if(myGroceryList[i] === item){
-      myGroceryList.splice(myGroceryList.i, 1)
+      myGroceryList.splice(myGroceryList[i], 1)
     }
   }
   return myGroceryList
 }
+else return myGroceryList = []
+}
 
 function addItem(myGroceryList, item){
-  if(myGroceryList && item != true){
-   return myGroceryList = [] 
-  }
+  if(myGroceryList && item){  
   myGroceryList.push(item)
   return myGroceryList
-  
+  }
+  else return myGroceryList = []
 }
 
 
@@ -303,9 +305,9 @@ function longer(arr1, arr2){
 */
 
 function both(arr1, arr2){
-  newestArr = []
-  for(let i = 0; i < longer().length; i++){
-    if(arr1[i] === arr2[i]){
+  let newestArr = []
+  for(let i = 0; i < arr1.length; i++){
+    if(arr2.includes(arr1[i])){
       newestArr.push(arr1[i])
     }
   }
@@ -352,21 +354,20 @@ var colt = {
 
 //Code Here
 devMountainEmployees.push(joe, cahlan, ryan, colt)
-console.log(devMountainEmployees)
-
+console.log(devMountainEmployees.length)
 /*
   Now let's say Cahlan has to take a leave of absence.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
 //Code Here
-function remove(devMountainEmployees){
+
   for(let i = 0; i < devMountainEmployees.length; i++){
-    if([i] === cahlan){
-      devMountainEmployees.slice([i], 1)
+    if(devMountainEmployees[i].name === 'Cahlan'){
+      devMountainEmployees.splice(i, 1)
     }
   }
-}
+
 
 
 ////////// PROBLEM 13 //////////
@@ -378,6 +379,7 @@ function remove(devMountainEmployees){
 */
 
 //Code Here
+let users = []
 
 
 
@@ -397,7 +399,20 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+let user2 = {
+  name: 'wesley walker',
+  email: 'whocares@bye.com',
+  password: 'you will never know',
+  username: 'hahahaha'
+}
+let user3 = {
+  name: 'fred name',
+  email: 'yes.com',
+  password: 'frooo',
+  username: 'lol'
+}
 
+users.push(user1, user2, user3)
 
 
 /*
@@ -411,7 +426,11 @@ var user1 = {
 */
 
 //Code Here
-
+for(let i = 0; i < users.length; i++){
+  if(users[i].name === 'Mark McIver'){
+    users.splice(i, 1)
+  }
+}
 
 
 /*
