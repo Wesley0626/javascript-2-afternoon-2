@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first (arr){
+  return arr[0]
+}
 
 
 
@@ -31,7 +33,9 @@ var arr = [40,50,60];
   Create a function named 'last' that is given 'arr' as an argument. 
   Return the last item in the given array.
 */
-
+function last(arr){
+  return arr[arr.length-1]
+}
 //Code Here
 
 
@@ -47,7 +51,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family){
+  for(let i = 0; i < family.length; i++){
+     alert(family[i])
+  }
+}
 
 
 
@@ -63,7 +71,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+function reversedLooper(family){
+  for(let i = family.length-1; i >= 0; i--){
+    alert(family[i])
+  }
+// console.log(family[i])
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +91,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+function evenFinder(nums){
+  let newArr = []
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i] % 2 === 0){
+      newArr.push(nums[i])
+    }
+  }
+  return newArr
+}
 
 
 
@@ -106,8 +127,26 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
 
+
+function divider(numbersArray){
+  let finalArr = []
+  let evens = []
+  let odds = []
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evens.push(numbersArray[i])
+    }
+    else odds.push(numbersArray[i])
+    // console.log(evens)
+    // console.log(odds)
+  }
+  finalArr.push(evens)
+  finalArr.push(odds)
+  return finalArr
+  // console.log(finalArr)
+}
+// console.log(finalArr)
 
 
 ////////// PROBLEM 7 //////////
@@ -128,7 +167,18 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(array){
+  let randomNumber = getRandomArbitrary()
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === randomNumber){
+      return true
+    }
+  }
+  return false
+}
+
+
+
 
 
 
@@ -157,8 +207,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item){
+  for(let i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === item){
+      myGroceryList.splice(myGroceryList.i, 1)
+    }
+  }
+  return myGroceryList
+}
 
+function addItem(myGroceryList, item){
+  if(myGroceryList && item != true){
+   return myGroceryList = [] 
+  }
+  myGroceryList.push(item)
+  return myGroceryList
+  
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -167,7 +232,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker(){
+  nums = []
+  for(let i = 0; i < 215; i++){
+    nums[i] = i + 1
+  }
+  return nums
+}
 
 
 
@@ -183,7 +254,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers){
+  newArray = []
+  for(let i = 0; i < numbers.length; i++){
+    newArray.push(parseInt(numbers[i]) + 10)
+  }
+  return newArray
+}
 
 
 
@@ -208,7 +285,12 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }
+  else return arr2
+}
 
 
 
@@ -220,7 +302,15 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  newestArr = []
+  for(let i = 0; i < longer().length; i++){
+    if(arr1[i] === arr2[i]){
+      newestArr.push(arr1[i])
+    }
+  }
+  return newestArr
+}
 
 
 
@@ -261,8 +351,8 @@ var colt = {
 */
 
 //Code Here
-
-
+devMountainEmployees.push(joe, cahlan, ryan, colt)
+console.log(devMountainEmployees)
 
 /*
   Now let's say Cahlan has to take a leave of absence.
@@ -270,7 +360,13 @@ var colt = {
 */
 
 //Code Here
-
+function remove(devMountainEmployees){
+  for(let i = 0; i < devMountainEmployees.length; i++){
+    if([i] === cahlan){
+      devMountainEmployees.slice([i], 1)
+    }
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
